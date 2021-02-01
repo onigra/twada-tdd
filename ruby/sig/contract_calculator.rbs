@@ -1,0 +1,5 @@
+# 通らないので保留
+# class ContractCalculator
+#   def self.calc: (price: Integer, category: Symbol, signed_on: Time) ->
+#     ({ revenue_recognition: Integer, revenued_at: Time} | NoMatchingPatternError)
+# end

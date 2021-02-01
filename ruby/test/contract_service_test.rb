@@ -7,7 +7,7 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "MS Word"
       price    = 18800
-      category = "word_processor"
+      category = :word_processor
       product = Product.new(name: name, price: price, category: category)
 
       # and
@@ -25,7 +25,7 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "MS Word"
       price    = 18800
-      category = "word_processor"
+      category = :word_processor
       product = Product.new(name: name, price: price, category: category)
 
       # and
@@ -44,7 +44,7 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "三四郎"
       price    = 5000
-      category = "spreadsheet"
+      category = :spreadsheet
       product = Product.new(name: name, price: price, category: category)
 
       # and
@@ -62,7 +62,7 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "三四郎"
       price    = 5000
-      category = "spreadsheet"
+      category = :spreadsheet
       product = Product.new(name: name, price: price, category: category)
 
       # and
