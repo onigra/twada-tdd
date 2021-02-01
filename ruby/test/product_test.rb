@@ -7,7 +7,7 @@ class TC_Product < Test::Unit::TestCase
       # given
       name     = "MS Word"
       price    = 18800
-      category = "word_processor"
+      category = Category.new(name: :word_processor)
 
       # when
       product = Product.new(name: name, price: price, category: category)
@@ -24,7 +24,7 @@ class TC_Product < Test::Unit::TestCase
       # given
       name     = "三四郎"
       price    = 5000
-      category = "spreadsheet"
+      category = Category.new(name: :spreadsheet)
 
       # when
       product = Product.new(name: name, price: price, category: category)

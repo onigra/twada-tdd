@@ -7,10 +7,10 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "MS Word"
       price    = 18800
-      category = "word_processor"
-      product = Product.new(name: name, price: price, category: category)
+      category = Category.new(name: :word_processor)
 
       # and
+      product = Product.new(name: name, price: price, category: category)
       signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00") 
 
       # when
@@ -25,10 +25,10 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "MS Word"
       price    = 18800
-      category = "word_processor"
-      product = Product.new(name: name, price: price, category: category)
+      category = Category.new(name: :word_processor)
 
       # and
+      product = Product.new(name: name, price: price, category: category)
       signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00") 
 
       # when
@@ -44,10 +44,10 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "三四郎"
       price    = 5000
-      category = "spreadsheet"
-      product = Product.new(name: name, price: price, category: category)
+      category = Category.new(name: :spreadsheet)
 
       # and
+      product = Product.new(name: name, price: price, category: category)
       signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00") 
 
       # when
@@ -62,10 +62,10 @@ class TC_ContractService < Test::Unit::TestCase
       # given
       name     = "三四郎"
       price    = 5000
-      category = "spreadsheet"
-      product = Product.new(name: name, price: price, category: category)
+      category = Category.new(name: :spreadsheet)
 
       # and
+      product = Product.new(name: name, price: price, category: category)
       signed_on = Time.new(2021, 2, 1, 0, 0, 0, "+09:00") 
 
       # and
