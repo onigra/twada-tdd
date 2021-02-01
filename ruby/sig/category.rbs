@@ -1,0 +1,7 @@
+class Category
+  CATEGORIES: Array[Symbol]
+
+  attr_reader name: Symbol
+
+  def initialize: (name: Symbol) -> void
+end
