@@ -10,7 +10,6 @@ class ContractCalculator
       fraction = price % 3
       revenue_recognition = tmp_revenue + fraction
 
-      # spreadsheetは契約日から30日後が売上認識日となる
       revenued_at = signed_on + (86400 * 30)
       
       { revenue_recognition: revenue_recognition, revenued_at: revenued_at}
