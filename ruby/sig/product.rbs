@@ -1,0 +1,7 @@
+class Product
+  attr_reader name: String
+  attr_reader price: Integer
+  attr_reader category: Category
+
+  def initialize: (name: String, price: Integer, category: Category) -> void
+end
