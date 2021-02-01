@@ -25,16 +25,28 @@
   - name
   - category
     - 型？
-- Contract(Service)
+- Contract
   - signed_on
   - revenue
   - revenue_recognition
+- ContractService?
+  - Productとsigned_onを渡すとContractを返す
+  - signメソッドを持ってる
 
 ## タスクリスト
 
 - [x] 商品が作成ができる
   - [x] 名前、価格、カテゴリをもって、商品が作成できる
-- [ ] 契約ができる(ContractにProductとsigned_onを渡すと色々出てくるイメージ)
-　　- [ ] 引数
-　　  - [ ] Product
-　　  - [ ] signed_on(DateTime)
+    - [ ] カテゴリが存在するもの以外が渡されたらどうするか？(型がほしい)
+- [x] 契約ができる(ContractにProductとsigned_onを渡すと契約内容が返ってくる)
+  - [x] 商品と契約日を渡すと、契約内容が割り出せる
+　　- [x] 引数
+　　  - [x] Product
+　　  - [x] signed_on(DateTime)
+
+## 落穂広い
+
+- テストのsetupが冗長なのでリファクタリング
+- プロダクトコードのコメントを消したい
+- contract_serviceはドメインモデル貧血症の可能性がある
+  - contract自体がserviceの責務を持つべきか？
