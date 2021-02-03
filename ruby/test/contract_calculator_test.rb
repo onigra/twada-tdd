@@ -6,7 +6,7 @@ class TC_ContractCalculator < Test::Unit::TestCase
     def test_全額売上認識される
       # given
       price = 18800
-      category = "word_processor"
+      category = :word_processor
       signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00")
 
       # when
@@ -19,7 +19,7 @@ class TC_ContractCalculator < Test::Unit::TestCase
     def test_契約日が売上認識日となる
       # given
       price = 20000
-      category = "word_processor"
+      category = :word_processor
       signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00")
 
       # when
@@ -34,7 +34,7 @@ class TC_ContractCalculator < Test::Unit::TestCase
     def test_価格の3分の2が売上認識される
       # given
       price = 3
-      category = "spreadsheet"
+      category = :spreadsheet
       signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00")
 
       # and
@@ -50,7 +50,7 @@ class TC_ContractCalculator < Test::Unit::TestCase
     def test_契約日から30日後が売上認識日となる
       # given
       price = 27800
-      category = "spreadsheet"
+      category = :spreadsheet
       signed_on = Time.new(2021, 2, 1, 0, 0, 0, "+09:00")
 
       # and
@@ -71,7 +71,7 @@ class TC_ContractCalculator < Test::Unit::TestCase
         price, expected = data
 
         # and
-        category = "spreadsheet"
+        category = :spreadsheet
         signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00")
 
         # when

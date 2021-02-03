@@ -1,6 +1,6 @@
 class ContractCalculator
   def self.calc(price:, category:, signed_on:)
-    if category == "word_processor"
+    if category == :word_processor
       { revenue_recognition: price, revenued_at: signed_on}
     else
       # カテゴリがspreadsheetの場合、価格の3分の2が売上認識される
