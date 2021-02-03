@@ -2,6 +2,20 @@ require 'test/unit'
 require 'contract_calculator'
 
 class TC_ContractCalculator < Test::Unit::TestCase
+  sub_test_case "存在しないカテゴリの場合" do
+    def test_NoMatchingPatternErrorが発生する
+      # given
+      price = 1
+      category = :powerpoint
+      signed_on = Time.new(2021, 1, 1, 0, 0, 0, "+09:00")
+
+      # then
+      assert_raise NoMatchingPatternError do
+        ContractCalculator.calc(price: price, category: category, signed_on: signed_on)
+      end
+    end
+  end
+
   sub_test_case "カテゴリがword_processorの場合" do
     def test_全額売上認識される
       # given
