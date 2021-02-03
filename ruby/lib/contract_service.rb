@@ -3,7 +3,7 @@ require_relative "./contract_calculator"
 
 class ContractService
   def self.sign(product:, signed_on:)
-    obj = ContractCalculator.calc(price: product.price, category: product.category, signed_on: signed_on)
+    obj = ContractCalculator.calc(price: product.price, category: product.category.name, signed_on: signed_on)
 
     return Contract.new(
       product: product,
