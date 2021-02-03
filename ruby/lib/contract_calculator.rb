@@ -1,8 +1,9 @@
 class ContractCalculator
   def self.calc(price:, category:, signed_on:)
-    if category == :word_processor
+    case category
+    in :word_processor
       { revenue_recognition: price, revenued_at: signed_on}
-    else
+    in :spreadsheet
       # カテゴリがspreadsheetの場合、価格の3分の2が売上認識される
       # 価格が3で割り切れない場合、なるべく早いタイミングで大きい金額で集積確認したいため
       # 収益認識に端数をプラスする
